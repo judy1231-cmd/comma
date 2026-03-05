@@ -14,8 +14,12 @@ import Community from './pages/user/Community';
 import Challenge from './pages/user/Challenge';
 import HeartRateCheck from './pages/user/HeartRateCheck';
 import RestTypeTest from './pages/user/RestTypeTest';
+import StressTest from './pages/user/StressTest';
 import RestRecord from './pages/user/RestRecord';
 import MapPage from './pages/user/MapPage';
+import PlaceDetail from './pages/user/PlaceDetail';
+import Settings from './pages/user/Settings';
+import Notifications from './pages/user/Notifications';
 
 // Rest Category Pages
 import RestPhysical from './pages/user/RestPhysical';
@@ -68,7 +72,9 @@ function App() {
       <Route path="/password-reset" element={<PasswordReset />} />
       <Route path="/community" element={<Community />} />
       <Route path="/map" element={<MapPage />} />
+      <Route path="/places/:id" element={<PlaceDetail />} />
       <Route path="/rest-test" element={<RestTypeTest />} />
+      <Route path="/stress-test" element={<StressTest />} />
       <Route path="/rest/physical" element={<RestPhysical />} />
       <Route path="/rest/mental" element={<RestMental />} />
       <Route path="/rest/sensory" element={<RestSensory />} />
@@ -82,6 +88,8 @@ function App() {
       <Route path="/heartrate" element={<PrivateRoute><HeartRateCheck /></PrivateRoute>} />
       <Route path="/rest-record" element={<PrivateRoute><RestRecord /></PrivateRoute>} />
       <Route path="/challenge" element={<PrivateRoute><Challenge /></PrivateRoute>} />
+      <Route path="/settings" element={<PrivateRoute><Settings /></PrivateRoute>} />
+      <Route path="/notifications" element={<PrivateRoute><Notifications /></PrivateRoute>} />
 
       {/* 관리자 로그인 (공개) */}
       <Route path="/admin/login" element={<AdminLogin />} />
